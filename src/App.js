@@ -9,13 +9,14 @@ import Button from '@material-ui/core/Button';
 import { createMuiTheme } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
+import logo from './images/logo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   abRoot: {
-    backgroundColor: "#1f9c41",
+    backgroundColor: "#282828",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -37,10 +38,10 @@ function App() {
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           <MenuIcon />
         </IconButton>
+        <img src={logo} alt="logo.png" width="50px" height="50px" className="logo"/>
         <Typography variant="h6" className={classes.title}>
           Restaurant La Ciudad Nueva
         </Typography>
-        <Button color="inherit">Login</Button>
       </Toolbar>
     </AppBar>
     </div>
