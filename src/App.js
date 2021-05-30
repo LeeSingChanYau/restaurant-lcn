@@ -1,15 +1,13 @@
+import React from 'react';
 import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 import logo from './images/logo.png';
+import Homepage from './pages/homepage/homepage';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +42,7 @@ function App() {
         </Typography>
       </Toolbar>
     </AppBar>
+    <Homepage/>
     </div>
   );
 }
