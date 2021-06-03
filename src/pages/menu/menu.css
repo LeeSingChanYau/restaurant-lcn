@@ -2,3 +2,14 @@
     color: white;
     text-align: center;
 }
+
+.menu {
+    display: block;
+    margin: 75px auto;
+    width: 35%;
+    height: auto;
+}
+
+.line {
+    width: 10%;
+}
