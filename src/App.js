@@ -8,7 +8,6 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import logo from './images/logo.png';
 import wallpaper from './images/AntofagastaHongKong.jpeg';
-import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Menu from './pages/menu/menu';
 
@@ -56,7 +55,6 @@ function App() {
     </AppBar>
     <img src={wallpaper} alt="wallpaper" class="wallpaper"/>
       <Menu/>
-      <About/>
       <Contact/>
   
       
