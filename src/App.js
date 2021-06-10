@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import './App.css';
 import AppBar from '@material-ui/core/AppBar';
+import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
   },
   abRoot: {
     backgroundColor: "#282828",
-    alignItems: 'center',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -35,27 +34,62 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  buttonText: {
+    color: '#54ba00',
+    '&:hover': {
+    color: '#f00'
+    },
+  },
 }))
 
 function App() {
   const classes = useStyles();
-  const [light, setLight] = useState(true);
+
   return (
     <MuiThemeProvider theme={themeDark}>
       <CssBaseline/> 
-      <AppBar position="static" classes={{ 
+      <AppBar position="fixed" classes={{ 
       root: classes.abRoot,
       }}>
       <Toolbar>
-        <img src={logo} alt="logo.png" width="50px" height="50px" className="logo"/>
-        <Typography variant="h4" className={classes.title}>
-          Restaurant La Ciudad Nueva
-        </Typography>
+        <Grid container direction="row" alignItems="center">
+          <Grid container justify="center">
+            <Grid item>
+              <img src={logo} alt="logo.png" width="50px" height="50px" className="logo"/>
+            </Grid>
+            <Grid item>
+              <Typography variant="h4">
+                Restaurant La Ciudad Nueva
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container direction="row" justify="center" alignItems="center" spacing={5}>
+            <Grid item>
+                <a href='#menu'>
+                  <Typography variant="h5" className='btn-text'>
+                    Carta
+                  </Typography>
+                </a>
+            </Grid>
+            <Grid item> 
+              <a href="#contact">
+                <Typography variant="h5" className='btn-text'>
+                  Contacto
+                </Typography>
+              </a>
+            </Grid>
+          </Grid>
+        </Grid>
       </Toolbar>
     </AppBar>
     <img src={wallpaper} alt="wallpaper" class="wallpaper"/>
-      <Menu/>
-      <Contact/>
+      <div id="menu">
+        <Menu/>
+      </div>
+      
+      <div id="contact">
+        <Contact/>
+      </div>
   
       
     </MuiThemeProvider>

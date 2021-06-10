@@ -7,6 +7,24 @@
     height: auto;
 }
 
-.content  {
-    background-color: "#282828";
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #54ba00;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #54ba00;
+}
+
+.btn-text {
+    color: #54ba00;
+}
+
+.btn-text:hover {
+    color: white;
 }
